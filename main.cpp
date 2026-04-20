@@ -1,9 +1,17 @@
 #include <iostream>
 #include <string>
 
+#include "Page.h"
+#include "Book.h"
+/*
+* Name: Magda Hussein
+ * Date: 04/18/2026
+ * Program: Composition lab
+ * Assignment: IDE Activity - Managing Multiple File Applications
+ */
 // The following classes are declared inline for students to refactor
 // into separate header and implementation files.
-
+/**
 class Page {
 public:
     Page() : pageNumber(0), content("Empty Page") {}
@@ -71,10 +79,10 @@ private:
     Page currentPage; // Aggregation
 };
 
-
+**/
 int main() {
-    std::cout << "--- Original Inline Class Example ---" << std::endl;
-
+    //std::cout << "--- Original Inline Class Example ---" << std::endl;
+    std::cout << "--- Refactored Multi-File Example ---" << std::endl;
     // Demonstrate Page class
     Page p1(1, "Introduction to C++.");
     std::cout << "Page " << p1.getPageNumber() << ": " << p1.getContent() << std::endl;
@@ -87,10 +95,13 @@ int main() {
     std::cout << "Book Author: " << myBook.getAuthor() << std::endl;
     std::cout << "Current Page: " << myBook.getCurrentPageNumber() << std::endl;
     std::cout << "Page Content: " << myBook.getCurrentPageContent() << std::endl;
-
+/**
     std::cout << "\nYour task is to refactor the 'Page' and 'Book' classes "
               << "into their own header (.h) and implementation (.cpp) files." << std::endl;
     std::cout << "Remember to update this main.cpp file to include the new headers." << std::endl;
-
+**/
+    std::cout << "  - Page class: Page.h and Page.cpp" << std::endl;
+    std::cout << "  - Book class: Book.h and Book.cpp" << std::endl;
+    std::cout << "  - Include guards prevent multiple inclusions" << std::endl;
     return 0;
 }
